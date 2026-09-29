@@ -1,18 +1,24 @@
-{
+﻿{
   "name": "react-sqlite-crm",
   "version": "1.0.0",
   "main": "server/index.js",
   "scripts": {
-    "dev": "concurrently -k -p \"[{name}]\" -n \"SERVER,CLIENT\" -c \"cyan.bold,magenta.bold\" \"node server/index.js\" \"npm.cmd run dev --prefix client\"",
+    "dev": "concurrently -k -p \"[{name}]\" -n \"SERVER,CLIENT\" -c \"cyan.bold,magenta.bold\" \"node server/index.js\" \"npm run dev --prefix client\"",
     "server": "node server/index.js",
-    "client": "npm.cmd run dev --prefix client",
-    "build": "npm.cmd run build --prefix client",
+    "client": "npm run dev --prefix client",
+    "build": "npm install --prefix client && npm run build --prefix client",
     "start": "node server/index.js"
   },
-  "keywords": ["crm", "react", "sqlite", "windows"],
+  "keywords": [
+    "crm",
+    "react",
+    "sqlite",
+    "windows",
+    "render"
+  ],
   "author": "",
   "license": "MIT",
-  "description": "Local React CRM with SQLite database storage for Windows",
+  "description": "Local React CRM with SQLite database storage",
   "dependencies": {
     "better-sqlite3": "^13.0.3",
     "cors": "^2.8.6",
